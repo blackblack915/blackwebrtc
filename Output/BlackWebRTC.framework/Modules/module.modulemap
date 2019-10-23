@@ -1,0 +1,6 @@
+framework module BlackWebRTC {
+  umbrella header "BlackWebRTC.h"
+
+  export *
+  module * { export * }
+}
