@@ -28,7 +28,7 @@
 @implementation RTCIceServerTest
 
 - (void)testOneURLServer {
-  RTCIceServer *server = [[RTCIceServer alloc] initWithURLStrings:@[
+  RTCIceServer *server = [[RTCIceServer alloc] createWithURLStrings:@[
       @"stun:stun1.example.net" ]];
 
   webrtc::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
@@ -39,7 +39,7 @@
 }
 
 - (void)testTwoURLServer {
-  RTCIceServer *server = [[RTCIceServer alloc] initWithURLStrings:@[
+  RTCIceServer *server = [[RTCIceServer alloc] createWithURLStrings:@[
       @"turn1:turn1.example.net", @"turn2:turn2.example.net" ]];
 
   webrtc::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
@@ -52,7 +52,7 @@
 
 - (void)testPasswordCredential {
   RTCIceServer *server = [[RTCIceServer alloc]
-      initWithURLStrings:@[ @"turn1:turn1.example.net" ]
+      createWithURLStrings:@[ @"turn1:turn1.example.net" ]
                 username:@"username"
               credential:@"credential"];
   webrtc::PeerConnectionInterface::IceServer iceStruct = server.nativeServer;
@@ -63,7 +63,7 @@
 }
 
 - (void)testHostname {
-  RTCIceServer *server = [[RTCIceServer alloc] initWithURLStrings:@[ @"turn1:turn1.example.net" ]
+  RTCIceServer *server = [[RTCIceServer alloc] createWithURLStrings:@[ @"turn1:turn1.example.net" ]
                                                          username:@"username"
                                                        credential:@"credential"
                                                     tlsCertPolicy:RTCTlsCertPolicySecure
@@ -77,7 +77,7 @@
 }
 
 - (void)testTlsAlpnProtocols {
-  RTCIceServer *server = [[RTCIceServer alloc] initWithURLStrings:@[ @"turn1:turn1.example.net" ]
+  RTCIceServer *server = [[RTCIceServer alloc] createWithURLStrings:@[ @"turn1:turn1.example.net" ]
                                                          username:@"username"
                                                        credential:@"credential"
                                                     tlsCertPolicy:RTCTlsCertPolicySecure
@@ -93,7 +93,7 @@
 }
 
 - (void)testTlsEllipticCurves {
-  RTCIceServer *server = [[RTCIceServer alloc] initWithURLStrings:@[ @"turn1:turn1.example.net" ]
+  RTCIceServer *server = [[RTCIceServer alloc] createWithURLStrings:@[ @"turn1:turn1.example.net" ]
                                                          username:@"username"
                                                        credential:@"credential"
                                                     tlsCertPolicy:RTCTlsCertPolicySecure

@@ -29,7 +29,7 @@
 
 - (void)testConversionToNativeConfiguration {
   NSArray *urlStrings = @[ @"stun:stun1.example.net" ];
-  RTCIceServer *server = [[RTCIceServer alloc] initWithURLStrings:urlStrings];
+  RTCIceServer *server = [[RTCIceServer alloc] createWithURLStrings:urlStrings];
   RTCIntervalRange *range = [[RTCIntervalRange alloc] initWithMin:0 max:100];
 
   RTCConfiguration *config = [[RTCConfiguration alloc] init];
@@ -94,7 +94,7 @@
 
 - (void)testNativeConversionToConfiguration {
   NSArray *urlStrings = @[ @"stun:stun1.example.net" ];
-  RTCIceServer *server = [[RTCIceServer alloc] initWithURLStrings:urlStrings];
+  RTCIceServer *server = [[RTCIceServer alloc] createWithURLStrings:urlStrings];
   RTCIntervalRange *range = [[RTCIntervalRange alloc] initWithMin:0 max:100];
 
   RTCConfiguration *config = [[RTCConfiguration alloc] init];

@@ -40,7 +40,7 @@ RTC_OBJC_EXPORT
 
 + (NSString *)stringForType:(RTCSdpType)type;
 
-+ (RTCSdpType)typeForString:(NSString *)string;
++ (RTCSdpType)typeForString2:(NSString *)string;
 
 @end
 

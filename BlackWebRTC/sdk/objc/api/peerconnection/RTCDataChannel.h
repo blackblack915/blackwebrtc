@@ -123,7 +123,7 @@ RTC_OBJC_EXPORT
 - (void)close;
 
 /** Attempt to send |data| on this data channel's underlying data transport. */
-- (BOOL)sendData:(RTCDataBuffer *)data;
+- (BOOL)sendData2:(RTCDataBuffer *)data;
 
 @end
 

@@ -25,7 +25,7 @@
   return [NSString stringForStdString:string];
 }
 
-+ (RTCSdpType)typeForString:(NSString *)string {
++ (RTCSdpType)typeForString2:(NSString *)string {
   std::string typeString = string.stdString;
   return [[self class] typeForStdString:typeString];
 }

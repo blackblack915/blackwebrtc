@@ -32,7 +32,7 @@
   RTCConfiguration *originalConfig = [[RTCConfiguration alloc] init];
 
   NSArray *urlStrings = @[ @"stun:stun1.example.net" ];
-  RTCIceServer *server = [[RTCIceServer alloc] initWithURLStrings:urlStrings];
+  RTCIceServer *server = [[RTCIceServer alloc] createWithURLStrings:urlStrings];
   originalConfig.iceServers = @[ server ];
 
   // Generate a new certificate.

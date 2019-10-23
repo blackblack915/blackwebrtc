@@ -152,7 +152,7 @@ class DataChannelDelegateAdapter : public DataChannelObserver {
   _nativeDataChannel->Close();
 }
 
-- (BOOL)sendData:(RTCDataBuffer *)data {
+- (BOOL)sendData2:(RTCDataBuffer *)data {
   return _nativeDataChannel->Send(*data.nativeDataBuffer);
 }
 

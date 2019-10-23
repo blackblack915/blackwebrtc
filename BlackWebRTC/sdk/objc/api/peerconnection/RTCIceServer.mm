@@ -22,38 +22,38 @@
 @synthesize tlsAlpnProtocols = _tlsAlpnProtocols;
 @synthesize tlsEllipticCurves = _tlsEllipticCurves;
 
-- (instancetype)initWithURLStrings:(NSArray<NSString *> *)urlStrings {
-  return [self initWithURLStrings:urlStrings
+- (instancetype)createWithURLStrings:(NSArray<NSString *> *)urlStrings {
+  return [self createWithURLStrings:urlStrings
                          username:nil
                        credential:nil];
 }
 
-- (instancetype)initWithURLStrings:(NSArray<NSString *> *)urlStrings
+- (instancetype)createWithURLStrings:(NSArray<NSString *> *)urlStrings
                           username:(NSString *)username
                         credential:(NSString *)credential {
-  return [self initWithURLStrings:urlStrings
+  return [self createWithURLStrings:urlStrings
                          username:username
                        credential:credential
                     tlsCertPolicy:RTCTlsCertPolicySecure];
 }
 
-- (instancetype)initWithURLStrings:(NSArray<NSString *> *)urlStrings
+- (instancetype)createWithURLStrings:(NSArray<NSString *> *)urlStrings
                           username:(NSString *)username
                         credential:(NSString *)credential
                      tlsCertPolicy:(RTCTlsCertPolicy)tlsCertPolicy {
-  return [self initWithURLStrings:urlStrings
+  return [self createWithURLStrings:urlStrings
                          username:username
                        credential:credential
                     tlsCertPolicy:tlsCertPolicy
                          hostname:nil];
 }
 
-- (instancetype)initWithURLStrings:(NSArray<NSString *> *)urlStrings
+- (instancetype)createWithURLStrings:(NSArray<NSString *> *)urlStrings
                           username:(NSString *)username
                         credential:(NSString *)credential
                      tlsCertPolicy:(RTCTlsCertPolicy)tlsCertPolicy
                           hostname:(NSString *)hostname {
-  return [self initWithURLStrings:urlStrings
+  return [self createWithURLStrings:urlStrings
                          username:username
                        credential:credential
                     tlsCertPolicy:tlsCertPolicy
@@ -61,13 +61,13 @@
                  tlsAlpnProtocols:[NSArray array]];
 }
 
-- (instancetype)initWithURLStrings:(NSArray<NSString *> *)urlStrings
+- (instancetype)createWithURLStrings:(NSArray<NSString *> *)urlStrings
                           username:(NSString *)username
                         credential:(NSString *)credential
                      tlsCertPolicy:(RTCTlsCertPolicy)tlsCertPolicy
                           hostname:(NSString *)hostname
                   tlsAlpnProtocols:(NSArray<NSString *> *)tlsAlpnProtocols {
-  return [self initWithURLStrings:urlStrings
+  return [self createWithURLStrings:urlStrings
                          username:username
                        credential:credential
                     tlsCertPolicy:tlsCertPolicy
@@ -76,7 +76,7 @@
                 tlsEllipticCurves:[NSArray array]];
 }
 
-- (instancetype)initWithURLStrings:(NSArray<NSString *> *)urlStrings
+- (instancetype)createWithURLStrings:(NSArray<NSString *> *)urlStrings
                           username:(NSString *)username
                         credential:(NSString *)credential
                      tlsCertPolicy:(RTCTlsCertPolicy)tlsCertPolicy
@@ -183,7 +183,7 @@
       break;
   }
 
-  self = [self initWithURLStrings:urls
+  self = [self createWithURLStrings:urls
                          username:username
                        credential:credential
                     tlsCertPolicy:tlsCertPolicy

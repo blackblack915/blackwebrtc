@@ -37,7 +37,7 @@ NSString * const kRTCMediaStreamTrackKindVideo =
   return _nativeTrack->enabled();
 }
 
-- (void)setIsEnabled:(BOOL)isEnabled {
+- (void)setIsEnabled2:(BOOL)isEnabled {
   _nativeTrack->set_enabled(isEnabled);
 }
 

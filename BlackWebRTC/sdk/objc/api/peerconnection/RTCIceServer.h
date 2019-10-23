@@ -55,13 +55,13 @@ RTC_OBJC_EXPORT
 - (nonnull instancetype)init NS_UNAVAILABLE;
 
 /** Convenience initializer for a server with no authentication (e.g. STUN). */
-- (instancetype)initWithURLStrings:(NSArray<NSString *> *)urlStrings;
+- (instancetype)createWithURLStrings:(NSArray<NSString *> *)urlStrings;
 
 /**
  * Initialize an RTCIceServer with its associated URLs, optional username,
  * optional credential, and credentialType.
  */
-- (instancetype)initWithURLStrings:(NSArray<NSString *> *)urlStrings
+- (instancetype)createWithURLStrings:(NSArray<NSString *> *)urlStrings
                           username:(nullable NSString *)username
                         credential:(nullable NSString *)credential;
 
@@ -69,7 +69,7 @@ RTC_OBJC_EXPORT
  * Initialize an RTCIceServer with its associated URLs, optional username,
  * optional credential, and TLS cert policy.
  */
-- (instancetype)initWithURLStrings:(NSArray<NSString *> *)urlStrings
+- (instancetype)createWithURLStrings:(NSArray<NSString *> *)urlStrings
                           username:(nullable NSString *)username
                         credential:(nullable NSString *)credential
                      tlsCertPolicy:(RTCTlsCertPolicy)tlsCertPolicy;
@@ -78,7 +78,7 @@ RTC_OBJC_EXPORT
  * Initialize an RTCIceServer with its associated URLs, optional username,
  * optional credential, TLS cert policy and hostname.
  */
-- (instancetype)initWithURLStrings:(NSArray<NSString *> *)urlStrings
+- (instancetype)createWithURLStrings:(NSArray<NSString *> *)urlStrings
                           username:(nullable NSString *)username
                         credential:(nullable NSString *)credential
                      tlsCertPolicy:(RTCTlsCertPolicy)tlsCertPolicy
@@ -88,7 +88,7 @@ RTC_OBJC_EXPORT
  * Initialize an RTCIceServer with its associated URLs, optional username,
  * optional credential, TLS cert policy, hostname and ALPN protocols.
  */
-- (instancetype)initWithURLStrings:(NSArray<NSString *> *)urlStrings
+- (instancetype)createWithURLStrings:(NSArray<NSString *> *)urlStrings
                           username:(nullable NSString *)username
                         credential:(nullable NSString *)credential
                      tlsCertPolicy:(RTCTlsCertPolicy)tlsCertPolicy
@@ -100,7 +100,7 @@ RTC_OBJC_EXPORT
  * optional credential, TLS cert policy, hostname, ALPN protocols and
  * elliptic curves.
  */
-- (instancetype)initWithURLStrings:(NSArray<NSString *> *)urlStrings
+- (instancetype)createWithURLStrings:(NSArray<NSString *> *)urlStrings
                           username:(nullable NSString *)username
                         credential:(nullable NSString *)credential
                      tlsCertPolicy:(RTCTlsCertPolicy)tlsCertPolicy

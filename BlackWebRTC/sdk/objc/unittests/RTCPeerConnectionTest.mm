@@ -31,7 +31,7 @@
 
 - (void)testConfigurationGetter {
   NSArray *urlStrings = @[ @"stun:stun1.example.net" ];
-  RTCIceServer *server = [[RTCIceServer alloc] initWithURLStrings:urlStrings];
+  RTCIceServer *server = [[RTCIceServer alloc] createWithURLStrings:urlStrings];
 
   RTCConfiguration *config = [[RTCConfiguration alloc] init];
   config.iceServers = @[ server ];
